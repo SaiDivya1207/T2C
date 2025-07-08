@@ -1,32 +1,156 @@
+/* === GLOBAL RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f3f4f6;
+  line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 48px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 48px;
+}
+.recycle-icon svg {
+    width: 48px;
+    height: 48px;
+    display: block;
+}
+
+.fa-recycle {
+  color: #2ecc40;
+  font-size: 40px;
+}
+
+.text-content h1 {
+  font-size: 2rem;
+  color: black;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-content p {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 2px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0px;
+  font-weight: 300;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: gray;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  color: #2ecc40;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-right: 48px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.login-link {
+  text-decoration: none;
+  color: gray;
+  font-size: 1.3rem;
+  margin-right: 8px;
+}
+
+.login-link:hover {
+  color: #2ecc40;
+}
+
+.join-btn {
+  background: #2ecc40;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.join-btn:hover {
+  background: #27ae38;
+}
+
+/* ================= MAIN LOGIN SECTION ================= */
+main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  padding: 40px 20px;
 }
 
 .login-container {
   background-color: #fff;
-  padding: 40px;
+  padding: 32px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 450px;
   width: 100%;
+  margin: 40px auto;
 }
 
 .login-container h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   color: #111827;
 }
 
 .radio-group {
-  display: flex;
-  justify-content: space-around;
   margin-bottom: 20px;
+}
+
+.radio-group h5 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+.radio-group label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #374151;
+  font-weight: 500;
 }
 
 .form-group {
@@ -39,8 +163,7 @@ body {
   color: #374151;
 }
 
-.form-group input[type="email"],
-.form-group input[type="password"] {
+.form-group input {
   width: 100%;
   padding: 10px;
   border: 1px solid #d1d5db;
@@ -56,8 +179,6 @@ body {
 }
 
 .checkbox-group label {
-  display: flex;
-  align-items: center;
   color: #374151;
 }
 
@@ -73,16 +194,17 @@ body {
 button {
   width: 100%;
   padding: 10px;
-  background-color: #3b82f6;
+  background-color: #2ecc40; /* Green sign-in button */
   color: #fff;
   border: none;
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 button:hover {
-  background-color: #2563eb;
+  background-color: #27ae38;
 }
 
 .create-account {
@@ -101,16 +223,179 @@ button:hover {
 }
 
 .demo-credentials {
-  margin-top: 30px;
-  background-color: #f9fafb;
-  padding: 15px;
-  border-radius: 6px;
+  margin-top: 24px;
   font-size: 14px;
   color: #374151;
+  padding-top: 8px;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
 }
+
 
 .demo-credentials strong {
   color: #111827;
 }
 
+/* ================= FOOTER ================= */
+footer {
+  background-color: rgb(33, 33, 46);
+  color: gray;
+  padding: 32px 48px 0 48px;
+}
 
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 32px 48px 0 48px;
+  background: rgb(33, 33, 46);
+  position: relative;
+}
+
+.content,
+.quick-links,
+.contact-info {
+  flex: 1 1 220px;
+  margin: 12px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 48px;
+}
+.recycle-icon svg {
+    width: 48px;
+    height: 48px;
+    display: block;
+}
+.text-content1 h1 {
+  font-size: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-right: 60px;
+  letter-spacing: 1px;
+  color: white;
+  margin: 0;
+  font-weight: 700;
+}
+
+.text-content1 p {
+  font-size: 0.8rem;
+  color: gray;
+  margin-top: 2px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 300;
+  margin: 0px;
+}
+
+.footer-description {
+  margin-top: 16px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding-left: 48px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex:1 1 100%;
+  color:gray
+}
+
+.social-media {
+  display: flex;
+  gap: 16px;
+  font-size: 20px;
+  margin-top: 12px;
+  padding-left: 48px;
+}
+
+.social-media i {
+  transition: transform 0.2s;
+}
+
+.social-media i:hover {
+  transform: scale(1.2);
+}
+
+.fa-instagram {
+  color: #E1306C;
+}
+
+.fa-twitter {
+  color: #1DA1F2;
+}
+
+.fa-facebook-f {
+  color: #1e3465;
+}
+
+.fa-linkedin-in {
+  color: #0077b5;
+}
+
+.quick-links h3,
+.contact-info h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+.quick-links{
+    padding-left: 135px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+  padding-right:48px;
+  padding-left: 0;
+  margin: 0;
+}
+
+.quick-links ul li {
+  margin-bottom: 8px;
+}
+
+.quick-links ul li a {
+  color: gray;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.quick-links ul li a:hover {
+  color: #28A745;
+}
+.contact-info {
+    padding-left: 120px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: gray;
+}
+.contact-info h3{
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+.contact-info p {
+  margin: 6px 0;
+}
+
+.contact-info i {
+  margin-right: 8px;
+}
+
+.fa-envelope,
+.fa-phone,
+.fa-map-marker-alt {
+  color: green;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 24px;
+  padding-bottom: 16px;
+  font-size: 0.95rem;
+  color: #888;
+  border-top: 2px solid #444;
+  margin-top: 32px;
+  position: relative;
+}
