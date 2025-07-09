@@ -75,9 +75,30 @@
   <!-- Buttons -->
   <div class="buttons">
     <button class="cancel-btn">Cancel</button>
-    <button class="submit-btn">Schedule Pickup</button>
+    <button class="submit-btn" id="scheduleBtn" type="button">Schedule Pickup</button>
   </div>
 </div>
+
+<!-- Success Popup -->
+<div id="successPopup" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.3); z-index:999; align-items:center; justify-content:center;">
+  <div style="background:#fff; padding:2rem 2.5rem; border-radius:16px; box-shadow:0 4px 24px rgba(44,204,64,0.15); text-align:center; max-width:90vw;">
+    <i class="fas fa-check-circle" style="color:#2ecc40; font-size:2.5rem; margin-bottom:1rem;"></i>
+    <h2 style="margin-bottom:1rem;">Pickup scheduled successfully!</h2>
+    <p style="margin-bottom:1.5rem;">You will receive a confirmation mail.</p>
+    <button id="okBtn" style="background:#2ecc40; color:#fff; border:none; border-radius:20px; padding:0.6em 2em; font-size:1.1rem; cursor:pointer;">OK</button>
+  </div>
+</div>
+
+<script>
+  document.getElementById('scheduleBtn').onclick = function() {
+    // Optionally, validate form fields here before showing popup
+    document.getElementById('successPopup').style.display = 'flex';
+  };
+  document.getElementById('okBtn').onclick = function() {
+    document.getElementById('successPopup').style.display = 'none';
+    // Optionally, reset form or redirect
+  };
+</script>
 
 </body>
 </html>
