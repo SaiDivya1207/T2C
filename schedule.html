@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Schedule Pickup</title>
+  <link rel="stylesheet" href="schedule.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Schedule Pickup</h1>
+  <p>Book a convenient time for waste collection</p>
+
+  <!-- Waste Details Frame -->
+  <div class="frame">
+    <h3>Waste Details</h3>
+    <div class="two-column">
+      <div class="input-group icon-input">
+        <i class="fas fa-dumpster"></i>
+        <select id="waste-type" required>
+          <option disabled selected>Select waste type</option>
+          <option>Plastic</option>
+          <option>Metal</option>
+          <option>Organic</option>
+          <option>Glass</option>
+          <option>Electronic</option>
+        </select>
+      </div>
+      <div class="input-group icon-input">
+        <i class="fas fa-weight-hanging"></i>
+        <input type="text" id="estimated-weight" placeholder="Estimated weight (kg)" required>
+      </div>
+    </div>
+  </div>
+
+  <!-- Photo Upload Frame -->
+  <div class="frame photo-frame">
+    <h3>Upload Waste Image (Optional)</h3>
+    <label for="photo">Add a clear picture of the waste (if any):</label>
+    <div class="photo-upload-box">
+      <i class="fas fa-camera"></i>
+      <input type="file" id="photo" accept="image/*">
+    </div>
+  </div>
+
+  <!-- Pickup Details Frame -->
+  <div class="frame">
+    <h3>Pickup Details</h3>
+    <div class="input-group icon-input">
+      <i class="fas fa-map-marker-alt"></i>
+      <input type="text" id="pickup-address" placeholder="Pickup address" required>
+    </div>
+    <div class="two-column">
+      <div class="input-group icon-input">
+        <i class="fas fa-calendar-alt"></i>
+        <input type="date" id="pickup-date" required>
+      </div>
+      <div class="input-group icon-input">
+        <i class="fas fa-clock"></i>
+        <select id="pickup-time">
+          <option disabled selected>Preferred time</option>
+          <option>Morning (9AM - 12PM)</option>
+          <option>Afternoon (12PM - 3PM)</option>
+          <option>Evening (3PM - 6PM)</option>
+        </select>
+      </div>
+    </div>
+    <div class="input-group icon-input">
+      
+      <textarea id="notes" placeholder="Additional Notes (optional)"></textarea>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="buttons">
+    <button class="cancel-btn">Cancel</button>
+    <button class="submit-btn">Schedule Pickup</button>
+  </div>
+</div>
+
+</body>
+</html>
