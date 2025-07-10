@@ -1,0 +1,239 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #e6f4ea;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #14532d;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #444;
+}
+
+/* Mission Section */
+.mission-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  background-color: white;
+  gap: 40px;
+}
+
+.mission-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.mission-text h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #1c1c1c;
+}
+
+.mission-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.mission-image {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+}
+
+.mission-image img {
+  width: 800px;
+  max-width: 1500px;
+  border-radius: 10px;
+}
+
+.join-mission-btn {
+  background-color: #256d1b;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.join-mission-btn:hover {
+  background-color: #1c5615;
+}
+
+/* Core Values */
+.core-values {
+  padding: 60px 40px;
+  background-color: #f4f6f7;
+  text-align: center;
+}
+
+.core-values h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #1b1b1b;
+}
+
+.core-values p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.values-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.value-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 24px;
+  max-width: 250px;
+  flex: 1;
+  text-align: center;
+}
+
+.value-card i {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: #2ecc40;
+  font-weight: 400; /* not bold */
+}
+
+.value-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Impact Section */
+.impact-section {
+  padding: 60px 40px;
+  background-color: white;
+  text-align: center;
+}
+
+.impact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.impact-section p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.impact-stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.stat-card {
+  background-color: #f1f5f2;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 200px;
+  flex: 1;
+  text-align: center;
+}
+
+.stat-card i {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #007bff;
+  font-weight: 400; /* not bold */
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  color: #28a745;
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Team Section */
+.team-section {
+  padding: 60px 40px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.team-section p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.team-member {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.team-member h4 {
+  font-size: 1.1rem;
+  margin: 8px 0 4px;
+}
+
+.team-member p {
+  font-size: 0.9rem;
+  color: #666;
+}
